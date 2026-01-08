@@ -1,0 +1,42 @@
+{
+  "name": "@thingmate/zekta-time-series",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./index.js",
+  "scripts": {
+    "fb:build": "node fabrique/actions/cli/build.cli.js",
+    "fb:format": "prettier --write --ignore-unknown --config ./.prettierrc \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\"",
+    "fb:test": "vitest",
+    "fb:test:coverage": "vitest run --coverage",
+    "fb:bench": "vitest bench",
+    "fb:typedoc": "typedoc --options typedoc.json --tsconfig tsconfig.json",
+    "fb:prod": "node fabrique/actions/cli/build-and-publish.cli.js --mode prod",
+    "fb:dev": "node fabrique/actions/cli/build-and-publish.cli.js --mode dev",
+    "fb:rc": "node fabrique/actions/cli/build-and-publish.cli.js --mode rc",
+    "fb:node:dev": "node --experimental-strip-types --watch src/main.ts",
+    "fb:node:dev:inspect": "node --experimental-strip-types --watch --inspect src/main.ts"
+  },
+  "description": "Zekta time series implementation",
+  "keywords": [],
+  "author": "Valentin Richard",
+  "license": "MIT",
+  "access": "public",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thingmate/zekta-time-series.git"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@vitest/coverage-istanbul": "^4.0.16",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "typedoc": "^0.28.15",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "packageManager": "yarn@4.12.0",
+  "fabrique": {
+    "version": "1.1.0",
+    "type": "lib"
+  }
+}
