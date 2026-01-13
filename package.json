@@ -1,6 +1,6 @@
 {
   "name": "@thingmate/zekta-time-series",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "main": "./index.js",
   "scripts": {
@@ -26,17 +26,23 @@
     "url": "git+https://github.com/thingmate/zekta-time-series.git"
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "@vitest/coverage-istanbul": "^4.0.16",
+    "@types/node": "^25.0.7",
+    "@vitest/coverage-istanbul": "^4.0.17",
     "prettier": "^3.7.4",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "typedoc": "^0.28.15",
+    "typedoc": "^0.28.16",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.16"
+    "vitest": "^4.0.17"
   },
   "packageManager": "yarn@4.12.0",
   "fabrique": {
-    "version": "1.1.0",
+    "version": "1.1.1",
     "type": "lib"
+  },
+  "dependencies": {
+    "@thingmate/time-series": "^0.1.1",
+    "@xstd/hex": "^0.1.0",
+    "@xstd/path": "^1.0.0",
+    "@xstd/sha256": "^1.0.0"
   }
 }
